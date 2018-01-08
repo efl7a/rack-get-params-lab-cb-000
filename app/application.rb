@@ -22,9 +22,9 @@ class Application
           resp.write "#{itme}\n"
         end
       end
-    elsif req.paht.match(/add/)
-
-
+    elsif req.path.match(/add/)
+      item_to_add = req.params
+      @@cart << item_to_add
     else
       resp.write "Path Not Found"
     end
